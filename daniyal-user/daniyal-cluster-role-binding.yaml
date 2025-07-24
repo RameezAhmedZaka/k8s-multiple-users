@@ -1,0 +1,14 @@
+# daniyal-clusterrolebinding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: daniyal-binding
+subjects:
+- kind: User
+  name: daniyal       # This must match the user name in your kubeconfig
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: daniyal-role
+  apiGroup: rbac.authorization.k8s.io
+
